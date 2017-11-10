@@ -1,0 +1,360 @@
+*{
+	padding:0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+/*nav导航条的css*/
+nav{
+	width: 100%;
+	height: 80px;
+	/*固定定位,整个导航条要跟上动*/
+	position:fixed;
+	left: 0;
+	top:0;
+	z-index: 999;
+	background: white;
+	box-shadow: 0 0px 5px #bbb;
+}
+nav .content{
+	width: 1200px;
+	height: 80px;
+	/*background: yellow;*/
+	margin: 0 auto;
+}
+nav .content img{
+	float:left;
+}
+nav .content ul{
+	float:right;
+	width: 480px;
+	height: 80px;
+	/*background: pink;*/
+}
+nav .content ul li{
+	float:left;
+	line-height: 70px;
+	margin-right: 20px;
+	font-size: ;
+	font-family: arial;
+	color: #333;
+	/*background: red;*/
+	cursor: pointer;
+}
+
+
+/*header banner*/
+header{
+	width: 100%;
+	height: 700px;
+	background-color: blue;
+	background-image: url(../img/1.jpg);
+	/*背景图片不重复，只显示一张*/
+	background-repeat: no-repeat;
+	/*背景图出现在整个块的中间上面*/
+	background-position: top center;
+	/*调整背景图,缩放*/
+	background-size: 100%;
+	/* 背景图固定不动  */
+	background-attachment: fixed;
+	/*文档流,浮动都不太好让文字上下左右都居中*/
+	position: relative;
+}
+header .mask{
+	/*遮罩 宽高和header一样 然后加了个透明度的颜色*/
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+header p{
+	width: 200px;
+	height: 200px;
+	/*background: white;*/
+	/*下面四行是处理文字的*/
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	/*下面六行代码,是让一个元素在父元素中居中*/
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+
+/*professional skills*/
+.professional{
+	width: 100%;
+	/*background: red;*/
+}
+.professional h2{
+	width: 100%;
+	height: 75px;
+	/*下面改变字体属性*/
+	color: #333;
+	/*居中*/text-align: center;
+	/*垂直居中 行高*/line-height: 80px;
+	/*字体*/font-family:arial;
+}
+.professional .sanjiao{
+	/*三角*/
+	width: 0;
+	height: 0;
+	border-bottom: 25px solid black;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 0;
+	/*居中*/
+	margin: 0 auto;
+	/*向上移动*/
+	margin-top: -10px;
+}
+.professional .skills_box{
+	width: 100%;
+	/*此处需要加背景图片*/
+	background-image:url();
+	background-color: blue;
+}
+.professional .skills_box ul{
+	/*四个技能是放到有内宽的盒子中的*/
+	width:1200px;
+	/*background: green;*/
+	/*整个内宽的盒子居中*/
+	margin: 0 auto;
+	/*特殊用法*/
+	/*加了这条属性,浮动的子元素可以撑开自己*/
+	overflow: hidden;
+}
+.professional .skills_box ul li{
+	width: 225px;
+	/*高度是我自己随便写的*/
+	height: 400px;
+	background: #123456;
+	float: left;
+	margin-right: 100px;
+}
+.professional .skills_box ul li .icon{
+	width: 225px;
+	height: 225px;
+	/*圆的*/border-radius:50%;
+	/*圆的颜色,有透明度*/
+	background: rgba(158,104,102,0.65);
+	/*缩放0.85倍*/
+	transform: scale(0.85,0.85);
+	/*过渡 慢慢的变化*/
+	transition:background 0.5s,transform 0.5s;
+}
+.professional .skills_box ul li:hover .icon{
+	/*鼠标移入li后,背景色变深,整个变大*/
+	background: rgba(158,104,102,1);
+	transform: scale(1,1);
+}
+.professional .skills_box ul li h4{
+	text-align: center;
+	color: #bbb;
+	margin-top: 20px;
+	transition: color 0.5s;
+}
+.professional .skills_box ul li:hover h4{
+	color: #fff;
+}
+.professional .skills_box ul li p{
+	color: #bbb;
+	margin-top: 20px;
+	transition: color 0.5s;
+}
+.professional .skills_box ul li:hover p{
+	color: #fff;
+}
+
+
+/*design works*/
+.design_box{
+	width: 1200px;
+	height: 770px;
+	/*background: pink;*/
+	/*居中*/	margin: 0 auto;
+	/*整个块向下移动*/
+	margin-top: 20px;
+}
+.design_box h2{
+	width: 100%;
+	height: 75px;
+	/*下面改变字体属性*/
+	color: #333;
+	/*居中*/text-align: center;
+	/*垂直居中 行高*/line-height: 80px;
+	/*字体*/font-family:arial;
+}
+.design_box ul{
+	width: 100%;
+	height: 695px;
+	/*background: greenyellow;*/
+}
+.design_box ul li{
+	width: 330px;
+	height: 100%;
+	/*background: blueviolet;*/
+	float:left;
+	margin-right: 105px;
+	position:relative;
+}
+.design_box ul li .dot{
+	width: 10px;
+	height: 10px;
+	background: #90291C;
+	/*圆点*/border-radius: 50%;
+	position:absolute;
+	top: 10px;
+	left: 160px;
+	/*隐藏*/
+	display:none;
+}
+.design_box ul li h3{
+	width: 100%;
+	height: 30px;
+	/*文字居中*/
+	text-align: center;
+	/*行高*/line-height: 30px;
+	color: #333;
+	/*向下移动,避免盖住小点*/
+	margin-top: 20px;
+}
+.design_box ul li .works{
+	width: 270px;
+	height: 270px;
+	background: black;
+	margin: 0 auto;
+	margin-top: 30px;
+	/*圆角*/
+	border-radius: 20px;
+	/*溢出的部分隐藏掉*/
+	overflow: hidden;
+	/*鼠标移入 手型*/
+	cursor: pointer;
+}
+.design_box ul li .works img{
+	transition:transform 0.5s;
+}
+.design_box ul li .works:hover img{
+	transform: scale(1.2,1.2);
+}
+.design_box ul li a{
+	color: #8F2525;
+	float:right;
+	margin-top: 15px;
+}
+
+/*software skills*/
+.software{
+	width: 100%;
+	height: 450px;
+	background: #555;
+}
+.software h2{
+	width: 100%;
+	height: 75px;
+	/*下面改变字体属性*/
+	color: #fff;
+	/*居中*/text-align: center;
+	/*垂直居中 行高*/line-height: 180px;
+	/*字体*/font-family:arial;
+}
+.software ul{
+	width: 1200px;
+	height: 220px;
+	/*background: #abcdef;*/
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.software ul li{
+	height: 100%;
+	width: 140px;
+	margin-right: 72px;
+	/*background: #654321;*/
+	float: left;
+}
+.software ul li .rotate{
+	width: 140px;
+	height: 140px;
+	background: #654321;
+	transition:transform 0.5s;
+}
+.software ul li .rotate:hover{
+	transform: rotateY(360deg);
+}
+.software ul li h3{
+	width: 100%;
+	height: 30px;
+	line-height: 40px;
+	text-align: center;
+	color: #E05849;
+}
+
+
+/*last contact me*/
+footer{
+	width: 100%;
+/*	height: 450px;*/
+	padding-bottom:80px;
+	background: #EAEAEA;
+	margin-top: 130px;
+	border-top: 1px solid #EAEAEA;
+}
+footer .self{
+	width: 100px;
+	height: 100px;
+	border: 3px solid #8D2212;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: -50px;
+	overflow: hidden;
+}
+footer .content{
+	font-size: 18px;
+	color: #999;
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 1.5em;
+}
+footer h3{
+	width: 100%;
+	text-align: center;
+	color:#8D2820;
+	margin-top: 30px;
+}
+footer ul{
+	width: 800px;
+	height: 180px;
+	margin: 0 auto;
+	margin-top: 20px;
+	/*background: black;*/
+}
+footer ul li{
+	height: 100%;
+	width:200px;
+	float:left;
+	/*background: red;*/
+}
+footer ul li div{
+	width: 100px;
+	height: 100px;
+	background: #A7A7A7;
+	margin: 0 auto;
+	border-radius: 20px;
+	/*文字*/
+	text-align: center;
+	line-height: 90px;
+	color:white;
+}
+footer ul li p{
+	
+}
